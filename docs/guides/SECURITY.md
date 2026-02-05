@@ -19,6 +19,7 @@
 ### Response Timeline
 
 We will acknowledge your report within **48 hours** and:
+
 - Verify the vulnerability
 - Assess severity and impact
 - Develop and test a fix
@@ -28,10 +29,10 @@ For critical vulnerabilities, we aim to release patches within **7 days** of ver
 
 ## Supported Versions
 
-| Version | Supported          | Release Date | EOL Date   |
-| ------- | ------------------ | ------------ | ---------- |
-| 1.x     | ✅ Yes             | 2024-Q4      | 2026-Q4    |
-| 0.x     | ⚠️ Limited Support | 2024-Q3      | 2025-Q1    |
+| Version | Supported          | Release Date | EOL Date |
+| ------- | ------------------ | ------------ | -------- |
+| 1.x     | ✅ Yes             | 2024-Q4      | 2026-Q4  |
+| 0.x     | ⚠️ Limited Support | 2024-Q3      | 2025-Q1  |
 
 Security updates are provided for the latest version only. We recommend always updating to the latest stable release.
 
@@ -40,6 +41,7 @@ Security updates are provided for the latest version only. We recommend always u
 ### For Users
 
 1. **Keep Dependencies Updated**
+
    ```bash
    npm audit
    npm update
@@ -55,6 +57,7 @@ Security updates are provided for the latest version only. We recommend always u
    - Use environment-specific secrets in CI/CD
 
 4. **Regular Audits**
+
    ```bash
    npm audit --audit-level=moderate
    ```
@@ -117,12 +120,14 @@ This project follows security best practices:
 ### Regular Updates
 
 Dependencies are updated on a weekly schedule via Dependabot:
+
 - Minor and patch updates: Auto-merged if tests pass
 - Major updates: Require manual review and testing
 
 ### Audit Level
 
 We use `moderate` audit level, which flags:
+
 - Critical vulnerabilities: ❌ Always block
 - High vulnerabilities: ❌ Always block
 - Moderate vulnerabilities: ⚠️ Reviewed before merge
@@ -133,6 +138,7 @@ We use `moderate` audit level, which flags:
 ### Sensitive Data
 
 Never commit:
+
 - API keys or tokens
 - Database credentials
 - Private encryption keys
@@ -151,6 +157,7 @@ cp .env.example .env.local
 ### GitHub Actions Secrets
 
 For CI/CD workflows:
+
 1. Go to Settings → Secrets and variables → Actions
 2. Add repository secrets (e.g., `DEPLOY_TOKEN`, `API_KEY`)
 3. Reference in workflows: `${{ secrets.SECRET_NAME }}`
@@ -160,6 +167,7 @@ For CI/CD workflows:
 ### Vercel Deployment
 
 If using Vercel:
+
 - Secrets are encrypted and isolated per deployment
 - Never expose secrets in build output
 - Use Vercel's environment variables feature
@@ -167,6 +175,7 @@ If using Vercel:
 ### External Services
 
 Be cautious when integrating:
+
 - Verify SSL certificates
 - Use HTTPS for all external APIs
 - Validate API responses
@@ -191,6 +200,7 @@ Once a fix is released, we will:
 ## Questions?
 
 For security questions that aren't vulnerability reports:
+
 - Start a [GitHub Discussion](https://github.com/michael-mpj/react-three-next-upgraded/discussions)
 - Check existing [Issues](https://github.com/michael-mpj/react-three-next-upgraded/issues)
 - Review this security policy

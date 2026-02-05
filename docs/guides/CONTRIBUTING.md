@@ -13,30 +13,36 @@ Thank you for your interest in contributing! We welcome contributions of all kin
 ### Development Setup
 
 1. **Fork the repository**
+
    ```bash
    # Navigate to the repo on GitHub and click "Fork"
    ```
 
 2. **Clone your fork**
+
    ```bash
    git clone https://github.com/your-username/react-three-next-upgraded.git
    cd react-three-next-upgraded
    ```
 
 3. **Add upstream remote**
+
    ```bash
    git remote add upstream https://github.com/michael-mpj/react-three-next-upgraded.git
    ```
 
 4. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 5. **Start the development server**
+
    ```bash
    npm run dev
    ```
+
    The app will be available at `http://localhost:3000`
 
 ## Development Workflow
@@ -91,6 +97,7 @@ type(scope): description
 ```
 
 ### Types
+
 - `feat`: A new feature
 - `fix`: A bug fix
 - `docs`: Documentation only
@@ -101,6 +108,7 @@ type(scope): description
 - `chore`: Build process, dependencies, or tooling changes
 
 ### Examples
+
 ```
 feat(canvas): add post-processing effects
 fix(shader): correct fragment shader precision
@@ -111,6 +119,7 @@ chore(deps): upgrade tailwindcss to 3.4.19
 ## Pull Request Process
 
 1. **Push to your fork**
+
    ```bash
    git push origin feature/your-feature-name
    ```
@@ -122,23 +131,29 @@ chore(deps): upgrade tailwindcss to 3.4.19
    - Link any related issues
 
 3. **PR Description Template**
+
    ```markdown
    ## Description
+
    Brief description of what your PR does
 
    ## Related Issues
+
    Fixes #123
 
    ## Type of Change
+
    - [ ] Bug fix
    - [ ] New feature
    - [ ] Breaking change
    - [ ] Documentation
 
    ## Testing
+
    Describe how you tested these changes
 
    ## Checklist
+
    - [ ] My code follows the project's code style
    - [ ] I've run `npm run lint` and fixed any issues
    - [ ] I've tested this locally
@@ -158,27 +173,34 @@ chore(deps): upgrade tailwindcss to 3.4.19
 Use [GitHub Issues](https://github.com/michael-mpj/react-three-next-upgraded/issues) to report bugs.
 
 **Bug Report Template:**
+
 ```markdown
 ## Description
+
 Clear description of the bug
 
 ## Steps to Reproduce
+
 1. ...
 2. ...
 3. ...
 
 ## Expected Behavior
+
 What should happen
 
 ## Actual Behavior
+
 What actually happens
 
 ## Environment
+
 - OS: [e.g. macOS 14.0]
 - Node: [e.g. 22.0]
 - npm: [e.g. 10.0]
 
 ## Additional Context
+
 Screenshots, code snippets, or other relevant information
 ```
 
@@ -187,17 +209,22 @@ Screenshots, code snippets, or other relevant information
 Use [GitHub Discussions](https://github.com/michael-mpj/react-three-next-upgraded/discussions) or Issues to suggest improvements.
 
 **Feature Request Template:**
+
 ```markdown
 ## Description
+
 Clear description of the feature
 
 ## Motivation
+
 Why would this be useful?
 
 ## Proposed Solution
+
 How should this work?
 
 ## Alternatives Considered
+
 Other approaches you've thought about
 ```
 
@@ -216,27 +243,26 @@ Other approaches you've thought about
 When adding new 3D components:
 
 1. **Add to `src/components/canvas/Examples.jsx`**
+
    ```jsx
    export const MyComponent = (props) => {
-     return (
-       <group {...props}>
-         {/* Your Three.js elements */}
-       </group>
-     )
+     return <group {...props}>{/* Your Three.js elements */}</group>
    }
    ```
 
 2. **Use in pages with dynamic + View**
+
    ```jsx
    import dynamic from 'next/dynamic'
-   
-   const MyComponent = dynamic(
-     () => import('@/components/canvas/Examples').then((m) => m.MyComponent),
-     { ssr: false }
-   )
-   
+
+   const MyComponent = dynamic(() => import('@/components/canvas/Examples').then((m) => m.MyComponent), { ssr: false })
+
    export default function Page() {
-     return <View><MyComponent /></View>
+     return (
+       <View>
+         <MyComponent />
+       </View>
+     )
    }
    ```
 
@@ -250,6 +276,7 @@ See `.github/copilot-instructions.md` for complete architecture patterns.
 ## Project Architecture
 
 This project uses a unique architecture combining:
+
 - **Next.js 16** with App Router
 - **React Three Fiber** for 3D rendering
 - **Tunnel-Rat** for component portaling between DOM and Canvas

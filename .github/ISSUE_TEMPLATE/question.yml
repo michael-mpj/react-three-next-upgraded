@@ -1,7 +1,7 @@
 name: Question / Help
 description: Ask a question or request help
-title: "[QUESTION] "
-labels: ["question"]
+title: '[QUESTION] '
+labels: ['question']
 assignees: []
 
 body:

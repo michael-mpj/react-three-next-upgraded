@@ -1,7 +1,7 @@
 name: Bug Report
 description: Report a bug or issue with the project
-title: "[BUG] "
-labels: ["bug"]
+title: '[BUG] '
+labels: ['bug']
 assignees: []
 
 body:
@@ -28,7 +28,7 @@ body:
     attributes:
       label: Description
       description: Clear description of the bug
-      placeholder: "The bug occurs when..."
+      placeholder: 'The bug occurs when...'
     validations:
       required: true
 
@@ -44,7 +44,7 @@ body:
       value: |
         1. 
         2. 
-        3. 
+        3.
     validations:
       required: true
 
@@ -53,7 +53,7 @@ body:
     attributes:
       label: Expected Behavior
       description: What should happen instead
-      placeholder: "The application should..."
+      placeholder: 'The application should...'
     validations:
       required: true
 
@@ -62,7 +62,7 @@ body:
     attributes:
       label: Actual Behavior
       description: What actually happens
-      placeholder: "Instead, the application..."
+      placeholder: 'Instead, the application...'
     validations:
       required: true
 
@@ -82,7 +82,7 @@ body:
     id: environment-node
     attributes:
       label: Node.js Version
-      placeholder: "22.x"
+      placeholder: '22.x'
     validations:
       required: true
 
@@ -90,7 +90,7 @@ body:
     id: environment-npm
     attributes:
       label: npm Version
-      placeholder: "10.x"
+      placeholder: '10.x'
     validations:
       required: true
 
@@ -110,4 +110,4 @@ body:
     attributes:
       label: Additional Context
       description: Any additional information that might help
-      placeholder: "Screenshots, code snippets, or other context..."
+      placeholder: 'Screenshots, code snippets, or other context...'

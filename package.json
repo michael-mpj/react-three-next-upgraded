@@ -12,7 +12,7 @@
     "yarn": ">=4"
   },
   "scripts": {
-    "lint": "next lint --fix --dir app",
+    "lint": "eslint --config config/.eslintrc .",
     "dev": "next dev",
     "build": "next build",
     "analyze": "ANALYZE=true next build",
