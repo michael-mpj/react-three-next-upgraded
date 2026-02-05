@@ -292,8 +292,8 @@ Use `Suspense` with `dynamic()` for better initial load performance:
 Contributions welcome! To set up a development environment:
 
 ```bash
-git clone https://github.com/pmndrs/react-three-next
-cd react-three-next
+git clone https://github.com/michael-mpj/react-three-next-upgraded
+cd react-three-next-upgraded
 yarn install
 yarn dev
 ```
@@ -306,8 +306,10 @@ MIT © Renaud Rohlinger
 
 - [Poimandres](https://github.com/pmndrs/) – React Three Fiber ecosystem
 - [Vercel](https://vercel.com/) – Next.js and deployment platform
+- [Renaud Rohlinger](https://twitter.com/onirenaud) – Original React Three Next creator
 
 ---
 
-**Maintainer:** [@onirenaud](https://twitter.com/onirenaud)  
+**Maintainer:** [@michael-mpj](https://github.com/michael-mpj)  
+**Repository:** [react-three-next-upgraded](https://github.com/michael-mpj/react-three-next-upgraded)  
 **Community:** [Discord](https://discord.gg/ZZjjNvJ)

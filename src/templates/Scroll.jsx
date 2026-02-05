@@ -1,6 +1,6 @@
-// https://github.com/studio-freight/lenis
+// Scroll component reference
+// Repository: https://github.com/michael-mpj/react-three-next-upgraded
 // TODO refactor for app-directory
-// See https://github.com/pmndrs/react-three-next/pull/123
 
 // 1 - wrap <Component {...pageProps} /> with <Scroll /> in _app.jsx
 // 2 - add <ScrollTicker /> wherever in the canvas
