@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/michaeljoseph/Downloads/react-three-next-main/src/helpers/global.js"],"sourcesContent":["import tunnel from 'tunnel-rat'\n\nexport const r3f = tunnel()\n"],"names":[],"mappings":";;;;AAAA;;AAEO,MAAM,MAAM,IAAA,4JAAM"}},
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///Users/michaeljoseph/Downloads/react-three-next-main/src/components/canvas/Scene.jsx"],"sourcesContent":["'use client'\n\nimport { Canvas } from '@react-three/fiber'\nimport { Preload } from '@react-three/drei'\nimport { r3f } from '@/helpers/global'\nimport * as THREE from 'three'\n\nexport default function Scene({ ...props }) {\n  // Everything defined in here will persist between route changes, only children are swapped\n  return (\n    <Canvas {...props}\n      onCreated={(state) => (state.gl.toneMapping = THREE.AgXToneMapping)}\n    >\n      {/* @ts-ignore */}\n      <r3f.Out />\n      <Preload all />\n    </Canvas>\n  )\n}\n"],"names":[],"mappings":";;;;;AAEA;AACA;AACA;AACA;AALA;;;;;;AAOe,SAAS,MAAM,EAAE,GAAG,OAAO;IACxC,2FAA2F;IAC3F,qBACE,6LAAC,gNAAM;QAAE,GAAG,KAAK;QACf,WAAW,CAAC,QAAW,MAAM,EAAE,CAAC,WAAW,GAAG,oKAAoB;;0BAGlE,6LAAC,kIAAG,CAAC,GAAG;;;;;0BACR,6LAAC,yKAAO;gBAAC,GAAG;;;;;;;;;;;;AAGlB;KAXwB"}}]
+}
