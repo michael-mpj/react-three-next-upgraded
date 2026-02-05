@@ -1,0 +1,44 @@
+name: Question / Help
+description: Ask a question or request help
+title: "[QUESTION] "
+labels: ["question"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please check our documentation before asking:
+        - [README.md](https://github.com/michael-mpj/react-three-next-upgraded#readme)
+        - [Contributing Guide](https://github.com/michael-mpj/react-three-next-upgraded/blob/main/CONTRIBUTING.md)
+        - [AI Instructions](https://github.com/michael-mpj/react-three-next-upgraded/blob/main/.github/copilot-instructions.md)
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: What do you need help with?
+      placeholder: "I'm trying to..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Relevant code or additional information
+      placeholder: |
+        ```jsx
+        // Your code here
+        ```
+      render: jsx
+
+  - type: textarea
+    id: what-tried
+    attributes:
+      label: What I've Tried
+      description: Steps you've already taken
+      placeholder: |
+        - Checked the documentation
+        - Searched existing issues
+        - ...

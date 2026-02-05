@@ -5,10 +5,13 @@ node_modules/
 
 # Testing
 coverage/
+.nyc_output/
 
 # Production
 build/
 dist/
+.next/
+out/
 
 # Environment variables
 .env
@@ -22,6 +25,8 @@ dist/
 .idea/
 *.swp
 *.swo
+*.sublime-project
+*.sublime-workspace
 
 # OS
 .DS_Store
@@ -31,3 +36,21 @@ Thumbs.db
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Cache
+.cache/
+.eslintcache
+.stylelintcache
+
+# Turbopack
+.turbo/
+turbo.log
+
+# Vercel
+.vercel/
+
+# Misc
+*.pem
+.env.*.local

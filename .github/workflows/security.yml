@@ -1,0 +1,58 @@
+name: Security Audit
+
+on:
+    push:
+        branches: [main]
+    schedule:
+        - cron: '0 0 * * 0' # Weekly on Sunday
+
+jobs:
+    npm-audit:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 22.x
+                  cache: 'npm'
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Run npm audit
+              run: npm audit --audit-level=moderate
+              continue-on-error: true
+
+            - name: Upload audit report
+              uses: actions/upload-artifact@v4
+              if: always()
+              with:
+                  name: npm-audit-report
+                  path: npm-audit.json
+                  retention-days: 30
+
+    codeql:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            security-events: write
+        strategy:
+            fail-fast: false
+            matrix:
+                language: ['javascript-typescript']
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Initialize CodeQL
+              uses: github/codeql-action/init@v3
+              with:
+                  languages: ${{ matrix.language }}
+
+            - name: Autobuild
+              uses: github/codeql-action/autobuild@v3
+
+            - name: Perform CodeQL Analysis
+              uses: github/codeql-action/analyze@v3
